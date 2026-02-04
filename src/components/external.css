@@ -17,3 +17,8 @@
     border: red solid 1px;
     border-radius: 10px;
 }
+.imgs{
+    width: 200px;
+    height: 200px;
+    border-radius: 30%; 
+}
