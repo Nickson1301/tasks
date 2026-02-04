@@ -1,6 +1,7 @@
 
 import './App.css';
-import ParentComp from './components/ParentComp';
+import SlideComp from './components/SlideComp';
+//import ParentComp from './components/ParentComp';
 
 function App() {
   return (
@@ -9,7 +10,9 @@ function App() {
       <Functions ename="Girish" epost="programmer analyst trainee"/>
       <StateComp/>
       <MethodEvent/> */}
-      <ParentComp/>
+      {/* <ParentComp/> */}
+      <SlideComp/>
+
     </div>
   );
 }

@@ -2,7 +2,10 @@ import { Component } from "react";
 import ChildComp from "./ChildComp";
 import MyPureComp from "./MyPureComp";
 import MyReactMemoComp from "./MyReactMemoComp";
+
 import "./external.css"
+import UserComp from "./UserComp";
+import ErrorBoundaryComp from "./ErrorBoundaryComp";
 
 class ParentComp extends Component{
 
@@ -28,6 +31,8 @@ class ParentComp extends Component{
              <ChildComp name={empname} salary={empsalary} update={this.updatesal}/>
              <MyPureComp ename={empname}/>
              <MyReactMemoComp/>
+            {/* <UserComp user="nickson"/> */}
+            <ErrorBoundaryComp/>
 
             </>
         )
