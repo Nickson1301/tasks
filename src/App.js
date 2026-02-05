@@ -1,6 +1,8 @@
 
 import './App.css';
-import SlideComp from './components/SlideComp';
+import ClickCounterComp from './components/ClickCounterComp';
+import { HoverCounterComp } from './components/HoverCounterComp';
+
 //import ParentComp from './components/ParentComp';
 
 function App() {
@@ -11,7 +13,8 @@ function App() {
       <StateComp/>
       <MethodEvent/> */}
       {/* <ParentComp/> */}
-      <SlideComp/>
+      <ClickCounterComp/>
+      <HoverCounterComp/>
 
     </div>
   );
