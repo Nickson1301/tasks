@@ -7,6 +7,7 @@ import HooksComp from "../ReactHooks/HooksComp";
 import UseStateComp from "../ReactHooks/UseStateComp";
 import UseEffectComp from "../ReactHooks/UseEffectComp";
 import VirtualDomComp from "../components/VirtualDomComp";
+import FormValComp from "../components/FormValComp";
 
 const router = createBrowserRouter([
 
@@ -17,6 +18,8 @@ const router = createBrowserRouter([
             { path: "usestate", element: <UseStateComp /> },
             { path: "useeffect", element: <UseEffectComp /> },
             { path: "virtualdom", element: <VirtualDomComp /> },
+            { path: "formval", element: <FormValComp /> },
+
         ]
     },
     {
