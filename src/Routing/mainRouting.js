@@ -8,17 +8,27 @@ import UseStateComp from "../ReactHooks/UseStateComp";
 import UseEffectComp from "../ReactHooks/UseEffectComp";
 import VirtualDomComp from "../components/VirtualDomComp";
 import FormValComp from "../components/FormValComp";
+import AddProductComp from "../CRUD/AddProductComp";
+import UpdateProductComp from "../CRUD/UpdateProductComp";
+import ProductDetailsComp from "../CRUD/ProductDetailsComp";
 
 const router = createBrowserRouter([
 
 
     {
-        path: "hooks", element: <HooksComp />, children: [
+        path: "", element: <HooksComp />, children: [
             { path: "images", element: <MyImagesComp /> },
             { path: "usestate", element: <UseStateComp /> },
             { path: "useeffect", element: <UseEffectComp /> },
             { path: "virtualdom", element: <VirtualDomComp /> },
             { path: "formval", element: <FormValComp /> },
+
+            {
+                path: "productdetail", element: <ProductDetailsComp />, children: [
+                    { path: "addproduct", element: <AddProductComp /> },
+                    { path: "updateproduct", element: <UpdateProductComp /> },
+                ]
+            },
 
         ]
     },
@@ -31,7 +41,7 @@ const router = createBrowserRouter([
             { path: "dashboard", element: <DashboardComp /> }
         ]
     },
-    { path: "", element: <MyImagesComp /> },
+    { path: "images", element: <MyImagesComp /> },
     { path: "*", element: <PageNotFoundComp /> }
 
 ])

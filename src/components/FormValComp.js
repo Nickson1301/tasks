@@ -57,7 +57,7 @@ const FormValComp = () => {
           type="password"
           name="password"
           onChange={inputchange}
-          placeholder="enter last name"
+          placeholder="enter password"
           value={user.password}
         /><br></br>
         <button type="submit">Sbumit</button>

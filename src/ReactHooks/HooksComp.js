@@ -11,6 +11,7 @@ const HooksComp = () => {
                     <Link to="images" className='btn btn-success btn-sm'>images</Link>{" "}
                     <Link to="virtualdom" className='btn btn-success btn-sm'>virtualdom</Link>{" "}
                     <Link to="formval" className='btn btn-success btn-sm'>form validation</Link>{" "}
+                    <Link to="productdetail" className='btn btn-success btn-sm'>Product detail</Link>{" "}
                 </div>
             </div>
             <Outlet />
