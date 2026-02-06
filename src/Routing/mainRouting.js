@@ -1,49 +1,43 @@
 import { createBrowserRouter } from "react-router-dom";
-import MyImagesComp from "../components/MyImagesComp";
-import DashboardComp from "../layout/DashboardComp";
-import NavComp from "../layout/NavComp"
-import PageNotFoundComp from "../layout/PageNotFoundComp"
+import MyImagesComp from '../components/MyImagesComp'
 import HooksComp from "../ReactHooks/HooksComp";
 import UseStateComp from "../ReactHooks/UseStateComp";
-import UseEffectComp from "../ReactHooks/UseEffectComp";
-import VirtualDomComp from "../components/VirtualDomComp";
+import DashboardComp from '../layout/DashboardComp'
+import PageNotFoundComp from '../layout/PageNotFoundComp'
+import ClassComp from '../components/ClassComp'
 import FormValComp from "../components/FormValComp";
-import AddProductComp from "../CRUD/AddProductComp";
-import UpdateProductComp from "../CRUD/UpdateProductComp";
-import ProductDetailsComp from "../CRUD/ProductDetailsComp";
+import AddProductComp from '../CRUD/AddProductComp'
+import UpdateProductComp from '../CRUD/UpdateProductComp'
+import ProductDetailsComp from '../CRUD/ProductDetailsComp'
+import VirtualDomComp  from '../components/VirtualDomComp'
+import DataListComp from "../layout/DataListComp";
+
+
 
 const router = createBrowserRouter([
-
-
     {
-        path: "", element: <HooksComp />, children: [
+        path: "dashboard", element: <DashboardComp />, children: [
+            
+            //2.naming routing
             { path: "images", element: <MyImagesComp /> },
-            { path: "usestate", element: <UseStateComp /> },
-            { path: "useeffect", element: <UseEffectComp /> },
-            { path: "virtualdom", element: <VirtualDomComp /> },
-            { path: "formval", element: <FormValComp /> },
-
+            
+            {path:"formval",element:<FormValComp/>},
+            {path:"addproducts",element:<AddProductComp/>},
+            {path:"updateproducts/:id",element:<UpdateProductComp/>},
+            {path:"productdetails",element:<ProductDetailsComp/>},
+            {path:"datalist",element:<DataListComp/>},
             {
-                path: "productdetail", element: <ProductDetailsComp />, children: [
-                    { path: "addproduct", element: <AddProductComp /> },
-                    { path: "updateproduct", element: <UpdateProductComp /> },
+                path: "hooks", element: <HooksComp />, children: [
+                    { path: "usestate", element: <UseStateComp /> }
                 ]
             },
-
+            {path:"virtualdom",element:<VirtualDomComp/>},
         ]
     },
-    {
-        path: "navbar", element: <NavComp />, children: [
-            { path: "images", element: <MyImagesComp /> },
-            { path: "usestate", element: <UseStateComp /> },
-            { path: "useeffect", element: <UseEffectComp /> },
-            { path: "hooks", element: <HooksComp /> },
-            { path: "dashboard", element: <DashboardComp /> }
-        ]
-    },
-    { path: "images", element: <MyImagesComp /> },
+    //1.default routing
+    { path: "", element: <ClassComp/> },
+    //5.wild card routing
     { path: "*", element: <PageNotFoundComp /> }
-
 ])
 
-export default router;
+export default router
