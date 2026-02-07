@@ -1,6 +1,12 @@
 {
   "products": [
     {
+      "id": "1",
+      "pname": "Laptop",
+      "pprice": 55000,
+      "pcompany": "lenova"
+    },
+    {
       "id": "2",
       "pname": "Mouse",
       "pprice": 2000,
@@ -29,12 +35,6 @@
       "pname": "CPU",
       "pprice": 7000,
       "pcompany": "HP"
-    },
-    {
-      "id": "d3a3",
-      "pname": "monitor",
-      "pprice": "20000",
-      "pcompany": "dell"
     }
   ],
   "users": [

@@ -1,16 +1,20 @@
 import React, { useEffect, useState } from 'react'
 import { useSelector,useDispatch } from 'react-redux'
 import {fetchData} from '../redux/apiSlice'
+
+
 const DataListComp = () => {
     const dispatch=useDispatch();
     const data=useSelector((state)=>{state.api.data})
     const status=useSelector((state)=>{state.api.status})
 
-    const [newData,setNewData]=useState()
+    const [newData,setNewData]=useState('')
 
     useEffect(()=>{
         dispatch(fetchData());
     },[])
+
+
   return (
     <div>
       <h2>data list</h2>
@@ -23,7 +27,7 @@ const DataListComp = () => {
                 <tbody>
                     {
                         data.length > 0 && data.map((value, index) => (
-                            <tr key={index}>
+                            <tr key={value.id}>
                                 <td>{index+1}</td>
                                 <td>{value.pname}</td>
                                 <td>{value.pprice}</td>

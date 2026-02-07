@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import HOCComp from './HOCComp'
 export class HoverCounterComp extends Component {
     //constructor(props) {
     //  super(props)
@@ -25,3 +25,4 @@ export class HoverCounterComp extends Component {
     )
   }
 }
+ export default HOCComp(HoverCounterComp)

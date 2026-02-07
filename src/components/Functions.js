@@ -1,7 +1,5 @@
-import { useState } from "react";
 
 const Functions=(props)=>{
-    const[name,setName]=useState()
     return(
         <>
         <h2>function components</h2>

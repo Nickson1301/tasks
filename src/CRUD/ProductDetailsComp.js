@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import DeleteIcon from '@mui/icons-material/Delete';
-import { Link, Outlet } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import BorderColorIcon from '@mui/icons-material/BorderColor';
 
 const ProductDetailsComp = () => {
@@ -32,7 +32,9 @@ const ProductDetailsComp = () => {
     return (
         <div>
             <h2>this is product detail Component</h2>
-            <Link to={"/dashboard/addproducts"} className='btn btn-primary mt-2 mb-1'><BorderColorIcon/>Add</Link>
+            <Link to={"/dashboard/addproducts"} className='btn btn-primary mt-2 mb-1'>
+               <BorderColorIcon/>Add
+            </Link>
             
             <table className='table table-stripped table-bordered'>
                 <thead>
@@ -43,7 +45,7 @@ const ProductDetailsComp = () => {
                 <tbody>
                     {
                         products.length > 0 && products.map((value, index) => (
-                            <tr key={index}>
+                            <tr key={value.id}>
                                 <td>{index+1}</td>
                                 <td>{value.pname}</td>
                                 <td>{value.pprice}</td>
